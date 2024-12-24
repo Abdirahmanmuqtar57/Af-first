@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Yoga Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="hambarger">
+            <i class="fa fa-bars" data-visible="true"></i> 
+            <i class="fa fa-close" data-visible="false"></i>
+                </div>
+        
+
+<nav class="container disktop-menu">
+    <ul id="left-menu" class="menu-link">
+        <li> <a href="#">Our Philosophy </a> </li>
+        <li> <a href="#"> Houses</a> </li>
+        <li> <a href="#">Map</a> </li>
+    </ul>
+    <h1> Retreatm5</h1>
+    
+    <ul id="right-menu" class="menu-link">
+        <li> <a href="#">leasure</a></li>
+        <li> <a href="#">How to get there</a></li>
+        <li> <a href="#">Contact</a></li>
+    </ul>
+
+</nav>
+
+<nav class="mobile-menu" data-visible="false">
+    <div class="navigation">
+        <h1> Retreatm5</h1>
+        <ul class="menu-link">
+        <li> <a href="#">Our Philosophy </a> </li>
+        <li> <a href="#"> Houses</a> </li>
+        <li> <a href="#">Map</a> </li>
+        <li> <a href="#">leasure</a></li>
+        <li> <a href="#">How to get there</a></li>
+        <li> <a href="#">Contact</a></li>
+            
+        </ul>
+        <div class="mobile-minu-action">
+            <a href="#" class="btn-primery">Book Aroom</a>
+            <a href="#" class="btn-secondary">Contact To Us</a>
+
+        </div>
+        
+
+    </div>
+    
+</nav>
+
+
+       
+    </header>
+
+   <script>
+        const hamburger = document.querySelector('.hambarger');
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const icons = document.querySelectorAll("i");
+
+        hamburger.addEventListener("click", function (event) {
+            const isVisible = mobileMenu.getAttribute('data-visible');
+            if (isVisible == "true") {
+                // qari hiding
+                mobileMenu.setAttribute('data-visible', "false");
+                icons[0].setAttribute('data-visible', "true");
+                icons[1].setAttribute('data-visible', "false");
+            } else if (isVisible == "false") {
+                // soo bandhig showing
+                mobileMenu.setAttribute('data-visible', "true");
+                icons[0].setAttribute('data-visible', "false");
+                icons[1].setAttribute('data-visible', "true");
+            }
+        });
+
+
+    </script>
+    
+</body>
+</html>
